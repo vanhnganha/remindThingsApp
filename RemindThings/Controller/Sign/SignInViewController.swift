@@ -60,7 +60,9 @@ class SignInViewController: UIViewController{
                 DispatchQueue.main.asyncAfter(deadline: when){
                     // your code with delay
                     alert.dismiss(animated: true, completion: {
-                        self?.appDel?.navigate()
+                        if let myDelegate = UIApplication.shared.delegate as? AppDelegate {
+                            myDelegate.navigate(K.ScreenName.TabBarController)
+                        }
                     })
                 }
             }

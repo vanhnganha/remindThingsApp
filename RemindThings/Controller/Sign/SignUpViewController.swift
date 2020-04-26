@@ -141,7 +141,9 @@ class SignUpViewController: UIViewController {
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
             alert.dismiss(animated: true) {
-                self.appDel?.navigate()
+                if let mydDelegate = UIApplication.shared.delegate as? AppDelegate {
+                    mydDelegate.navigate(K.ScreenName.TabBarController)
+                }
             }
         }
     }

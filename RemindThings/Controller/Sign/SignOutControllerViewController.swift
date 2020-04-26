@@ -11,7 +11,7 @@ import Firebase
 
 class SignOutControllerViewController: UIViewController {
 
-      var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+    var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         alertSignOut()
@@ -31,12 +31,16 @@ class SignOutControllerViewController: UIViewController {
             UserDefaults.standard.set(false, forKey: "isAuth")
             UserDefaults.standard.synchronize()
             DispatchQueue.main.async {
-                self.appDel?.navigate()
+                if let myDelgate = UIApplication.shared.delegate as? AppDelegate {
+                    myDelgate.navigate(K.ScreenName.startScreen)
+                }
             }
         }
         let actionNo = UIAlertAction(title: "Huỷ", style: .default) { (actionNo) in
            DispatchQueue.main.async {
-                          self.appDel?.navigate()
+                          if let myDelgate = UIApplication.shared.delegate as? AppDelegate {
+                                             myDelgate.navigate(K.ScreenName.TabBarController)
+                                         }
                       }
            
         }
