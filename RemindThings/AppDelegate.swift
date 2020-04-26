@@ -14,6 +14,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
     
     let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
@@ -26,22 +27,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         let db = Firestore.firestore()
         print(db)
-         navigate()
+        if #available(iOS 13, *) {
+
+         } else {
+             let isCheck = UserDefaults.standard.bool(forKey: "isAuth")
+            if isCheck == true {
+                navigate(K.ScreenName.TabBarController)
+            }
+            else {
+                navigate(K.ScreenName.startScreen)
+            }
+         }
         return true
     }
     
-    func navigate() {
-    let isCheck = UserDefaults.standard.bool(forKey: "isAuth")
-        var rootVC : UIViewController?
-        window = UIWindow(frame: UIScreen.main.bounds)
-        if isCheck {
-            rootVC = storyboard.instantiateViewController(withIdentifier: K.ScreenName.homeScreen) as! HomeViewController
-        }else{
-            rootVC = storyboard.instantiateViewController(withIdentifier: K.ScreenName.TabBarController) as! TabBarControllerViewController
-        }
-        self.navigationController = UINavigationController(rootViewController:rootVC!)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+    func navigate(_ identifierName: String) {
+        let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifierName)
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        UIApplication.shared.windows.first?.rootViewController = navigationController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 
     // MARK: UISceneSession Lifecycle
