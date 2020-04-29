@@ -17,6 +17,7 @@
 		522B375A244C089600DAC17C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3759244C089600DAC17C /* Constant.swift */; };
 		522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375C244C0ABE00DAC17C /* SignUpViewController.swift */; };
 		522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375E244C16EF00DAC17C /* StartViewController.swift */; };
+		525C0CE82456D2E5006AE6C3 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */; };
 		526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DB244C4C8C00B00916 /* ExtensionController.swift */; };
 		526135DE244C523B00B00916 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DD244C523B00B00916 /* HomeViewController.swift */; };
 		52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */; };
@@ -45,6 +46,7 @@
 		522B3759244C089600DAC17C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		522B375C244C0ABE00DAC17C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		522B375E244C16EF00DAC17C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		526135DB244C4C8C00B00916 /* ExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionController.swift; sourceTree = "<group>"; };
 		526135DD244C523B00B00916 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +132,6 @@
 				52B4AF1F244FE2AA0001924D /* Sign */,
 				52B4AF19244EEB1B0001924D /* ListToDo */,
 				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
-				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +139,7 @@
 		52B463482453F464006DA775 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
 				526135DD244C523B00B00916 /* HomeViewController.swift */,
 				522B375E244C16EF00DAC17C /* StartViewController.swift */,
 				52B4AF22244FF30E0001924D /* SettingViewController.swift */,
@@ -160,8 +162,6 @@
 			children = (
 				522B374B244B40D100DAC17C /* Main.storyboard */,
 				522B3750244B40D500DAC17C /* LaunchScreen.storyboard */,
-				52B463442453E853006DA775 /* CategoryCell.swift */,
-				52B463452453E853006DA775 /* CategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				52B4AF1A244EEB460001924D /* CategoryTableViewController.swift */,
+				525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */,
+				52B463442453E853006DA775 /* CategoryCell.swift */,
+				52B463452453E853006DA775 /* CategoryCell.xib */,
 			);
 			path = ListToDo;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */,
 				522B3748244B40D100DAC17C /* SceneDelegate.swift in Sources */,
 				526135DE244C523B00B00916 /* HomeViewController.swift in Sources */,
+				525C0CE82456D2E5006AE6C3 /* CustomProgressBar.swift in Sources */,
 				522B375A244C089600DAC17C /* Constant.swift in Sources */,
 				52B4AF0D244D390E0001924D /* User.swift in Sources */,
 				52B463462453E853006DA775 /* CategoryCell.swift in Sources */,

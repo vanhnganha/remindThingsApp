@@ -10,7 +10,6 @@ pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
-pod 'CircularProgressBar'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
 end
 

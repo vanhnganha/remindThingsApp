@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import ChameleonFramework
 
+
 class CategoryTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
@@ -37,8 +38,27 @@ class CategoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.TableCell.CategoryCell, for: indexPath) as! CategoryCell
-        cell.createProgressBar(set: 20, with: UIColor.randomFlat().hexValue())
+        cell.createProgressBar(with: 0.5, color: UIColor.randomFlat())
+        cell.name.text = "đi chợ"
+        cell.status.text = showFighting(with: 0.5)
+        
         return cell
+    }
+    
+    func showFighting(with number: Float) -> String {
+        if number < 0.5 {
+            return "Cố lên, bạn sẽ đạt được mục tiêu"
+        }
+        else if number == 0.5 {
+            return "Bạn đã hoàn thành 1/2 mục tiêu"
+        }
+        else if number > 0.5 {
+            return "Bạn sắp đạt được mục tiêu, cố lên"
+        }
+        else {
+            return "Chúc mừng bạn đã hoàn thành mục tiêu!"
+            }
+    
     }
    
 
@@ -88,7 +108,7 @@ class CategoryTableViewController: UITableViewController {
     */
   // MARK: FIREBASE/FIRESTORE
     func load(){
-        
+        var colorName: String = UIColor.randomFlat().hexValue()
     }
     
 }

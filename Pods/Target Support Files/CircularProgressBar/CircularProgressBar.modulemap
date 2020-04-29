@@ -1,6 +1,0 @@
-framework module CircularProgressBar {
-  umbrella header "CircularProgressBar-umbrella.h"
-
-  export *
-  module * { export * }
-}
