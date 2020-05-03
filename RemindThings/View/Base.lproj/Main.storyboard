@@ -396,7 +396,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BMn-r9-XaJ" kind="show" identifier="ListToDetail" id="zZq-G1-cUp"/>
+                        <segue destination="BMn-r9-XaJ" kind="show" identifier="listItem" id="zZq-G1-cUp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYf-lk-FaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

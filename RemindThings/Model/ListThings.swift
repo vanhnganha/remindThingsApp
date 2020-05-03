@@ -18,7 +18,7 @@ struct Categogy {
     var listChild: [String: Item]?
 }
 struct Item{
-    static var id: String = ""
+    var id: String
     var name: String
     var date: Timestamp
     var done: Bool

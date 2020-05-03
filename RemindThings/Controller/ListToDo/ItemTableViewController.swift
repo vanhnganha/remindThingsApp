@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ChameleonFramework
 class ItemTableViewController: SwipeTableViewController {
     let db = Firestore.firestore()
     var listItem = Array<Item>()
@@ -18,7 +19,7 @@ class ItemTableViewController: SwipeTableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadItems()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,19 +36,29 @@ class ItemTableViewController: SwipeTableViewController {
 
     // MARK: FIREBASE
     func loadItems(){
-        db.collection("user").document(User.id).collection("category").document(category!.id).collection("item").getDocuments() { (querySnapshot, error) in
+        let getItems = db.collection("user").document(User.id).collection("category").document(category!.id).collection("item")
+        getItems.order(by: "date", descending: true).getDocuments() { (querySnapshot, error) in
             if let e = error{
                 print("Have some error in \(e)")
                 }
             else {
-                for doc in querySnapshot!.documents {
-                    _ = doc.data()
-                    
+                for document in querySnapshot!.documents {
+                   let doc = document.data()
+                    let id = document.documentID
+                    if let nameItem = doc["name"], let doneItem = doc["done"], let dateItem = doc["date"]{
+                       let newName = nameItem as! String
+                        let newDone = doneItem as! Bool
+                        let newDate = dateItem as! Timestamp
+                        let newItem = Item(id: id, name: newName, date: newDate, done: newDone)
+                       self.listItem.append(newItem)
+                    }
                 }
+                self.tableView.reloadData()
             }
         }
         
         }
+    //MARK: Table resource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if self.listItem.count >= 1 {
@@ -60,53 +71,45 @@ class ItemTableViewController: SwipeTableViewController {
 }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        if listItem.count >= 1 {
+            let item = listItem[indexPath.row]
+            cell.textLabel?.text = item.name
+            let color = UIColor(hexString: category!.color)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat (listItem.count))
+            cell.backgroundColor = color
+            cell.textLabel?.textColor = ContrastColorOf(color!, returnFlat: true)
+            cell.tintColor = ContrastColorOf(color!, returnFlat: true)
+                
+            cell.accessoryType = item.done ? .checkmark : .none
+            
+        }
+        else {
+            cell.textLabel?.text = "Chưa có việc nào được thêm"
+        }
+        
+
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    //MARK: table delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if listItem.count >= 1{
+            var item = listItem[indexPath.row]
+            let changeItem = db.collection("user").document(User.id).collection("categoy").document(category!.id).collection("item").document(item.id)
+            changeItem.updateData(["done" : !item.done]) { (error) in
+                if let e = error {
+                    print("LOI \(e)")
+                }
+                else {
+                    item.done = !item.done
+                    tableView.reloadData()
+                }
+            }
+        }
     }
-    */
+  
+    
+    
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

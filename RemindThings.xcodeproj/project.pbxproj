@@ -122,9 +122,9 @@
 				52B4AF0E244D391B0001924D /* Model */,
 				522B375B244C0A7F00DAC17C /* Controller */,
 				52B4AF0F244D392A0001924D /* View */,
+				52B4AF10244D39370001924D /* Support */,
 				522B374E244B40D500DAC17C /* Assets.xcassets */,
 				522B3753244B40D500DAC17C /* Info.plist */,
-				52B4AF10244D39370001924D /* Support */,
 			);
 			path = RemindThings;
 			sourceTree = "<group>";
@@ -135,7 +135,6 @@
 				52B463482453F464006DA775 /* Feature */,
 				52B4AF1F244FE2AA0001924D /* Sign */,
 				52B4AF19244EEB1B0001924D /* ListToDo */,
-				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +142,7 @@
 		52B463482453F464006DA775 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
 				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
 				526135DD244C523B00B00916 /* HomeViewController.swift */,
 				522B375E244C16EF00DAC17C /* StartViewController.swift */,
@@ -182,11 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				52B4AF1A244EEB460001924D /* CategoryTableViewController.swift */,
-				525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */,
-				52B463442453E853006DA775 /* CategoryCell.swift */,
-				52B463452453E853006DA775 /* CategoryCell.xib */,
 				52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */,
 				52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */,
+				52B463442453E853006DA775 /* CategoryCell.swift */,
+				52B463452453E853006DA775 /* CategoryCell.xib */,
+				525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */,
 			);
 			path = ListToDo;
 			sourceTree = "<group>";
