@@ -11,7 +11,10 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     var appDel: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+    
+    
 // MARK: IBOUlet
+
     @IBOutlet weak var password2Text: UITextField!{
     didSet{
         password2Text.tintColor = UIColor.lightGray
@@ -99,7 +102,10 @@ class SignUpViewController: UIViewController {
             }
             }
          else {
-           
+            if let user = authResult?.user {
+                User.id = user.uid
+                print(User.id)
+            }
             self.saveNewInfor(newUser)
          }
             
@@ -109,7 +115,7 @@ class SignUpViewController: UIViewController {
     
     func saveNewInfor(_ newUser: User){
         print("LƯU THÀNH CÔNG")
-       ref = db.collection("user").addDocument(data: [
+        db.collection("user").document(User.id).setData([
             "username": newUser.username,
             "phone": newUser.phone,
             "address": newUser.address
@@ -117,8 +123,7 @@ class SignUpViewController: UIViewController {
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
-                    User.id = self.ref!.documentID
-                    print("Document added with ID: \(self.ref!.documentID)")
+                    print("Document added with ID: \(User.id)")
                     UserDefaults.standard.set(true, forKey: "isAuth")
                     UserDefaults.standard.synchronize()
                     self.alertSuccess()

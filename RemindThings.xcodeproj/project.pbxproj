@@ -29,6 +29,8 @@
 		52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF1D244EEBE30001924D /* ListThings.swift */; };
 		52B4AF21244FE2DB0001924D /* SignOutControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */; };
 		52B4AF23244FF30E0001924D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF22244FF30E0001924D /* SettingViewController.swift */; };
+		52DDEE1A245E7A2900E8F271 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */; };
+		52DDEE1C245E7AE800E8F271 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */; };
 		A3DEA827CD7C681AD373CBCD /* Pods_RemindThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		52B4AF1D244EEBE30001924D /* ListThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListThings.swift; sourceTree = "<group>"; };
 		52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutControllerViewController.swift; sourceTree = "<group>"; };
 		52B4AF22244FF30E0001924D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemindThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AF1B53BEB7E461B080B45B /* Pods-RemindThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindThings.release.xcconfig"; path = "Target Support Files/Pods-RemindThings/Pods-RemindThings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +185,8 @@
 				525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */,
 				52B463442453E853006DA775 /* CategoryCell.swift */,
 				52B463452453E853006DA775 /* CategoryCell.xib */,
+				52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */,
+				52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */,
 			);
 			path = ListToDo;
 			sourceTree = "<group>";
@@ -322,10 +328,12 @@
 				522B3748244B40D100DAC17C /* SceneDelegate.swift in Sources */,
 				526135DE244C523B00B00916 /* HomeViewController.swift in Sources */,
 				525C0CE82456D2E5006AE6C3 /* CustomProgressBar.swift in Sources */,
+				52DDEE1A245E7A2900E8F271 /* ItemTableViewController.swift in Sources */,
 				522B375A244C089600DAC17C /* Constant.swift in Sources */,
 				52B4AF0D244D390E0001924D /* User.swift in Sources */,
 				52B463462453E853006DA775 /* CategoryCell.swift in Sources */,
 				522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */,
+				52DDEE1C245E7AE800E8F271 /* SwipeTableViewController.swift in Sources */,
 				526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */,
 				52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */,
 				522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */,

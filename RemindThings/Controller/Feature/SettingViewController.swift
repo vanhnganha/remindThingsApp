@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 class SettingViewController: UIViewController {
     
-    
+    let db = Firestore.firestore()
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var currentPassText: UITextField!
     @IBOutlet weak var newPassText: UITextField!
@@ -18,6 +18,7 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getUsername()
+        getInfo()
         // Do any additional setup after loading the view.
     }
     
@@ -92,6 +93,21 @@ class SettingViewController: UIViewController {
        if let currentUser = Auth.auth().currentUser{
         usernameText.text = currentUser.email
         }
+    }
+    func  getInfo() {
+        if let user = Auth.auth().currentUser{
+            User.id = user.uid
+        let docRef = db.collection("user").document(User.id)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
     }
     @IBAction func acceptPressed(_ sender: Any) {
         changePass()

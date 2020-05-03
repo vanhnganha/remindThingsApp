@@ -52,6 +52,9 @@ class SignInViewController: UIViewController{
                 self!.present(alertFail, animated: true, completion: nil)
             }
         else {
+                if let user = authResult?.user{
+                    User.id = user.uid
+                }
                 UserDefaults.standard.set(true, forKey: "isAuth")
                 UserDefaults.standard.synchronize()
                 let alert = UIAlertController(title: "Đăng nhập thành công", message: "", preferredStyle: .alert)

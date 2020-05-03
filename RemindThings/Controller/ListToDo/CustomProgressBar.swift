@@ -23,7 +23,6 @@ class CustomProgressBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        createCircularPath(progressLayerNum: Float(progressLayer.strokeEnd))
     }
     
     required init?(coder: NSCoder) {
@@ -35,11 +34,6 @@ class CustomProgressBar: UIView {
             
         }
     }
-//    var num: Float{
-//          didSet{
-//              num = 0.0
-//          }
-//      }
     var trackColor = UIColor.white{
            didSet{
                trackLayer.strokeColor = trackColor.cgColor

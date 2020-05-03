@@ -7,15 +7,23 @@
 //
 
 import UIKit
-
+import Firebase
 class HomeViewController: UIViewController {
-
+   
     @IBOutlet weak var btnTodoList: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
       // tabBarController?.tabBar.layer.zPosition = 0
 
         // Do any additional setup after loading the view.
+        getUserId()
+       
+    }
+    func getUserId(){
+        if let user = Auth.auth().currentUser{
+            User.id = user.uid
+        }
+         print("THE USER ID IS \(User.id)")
     }
    
     
