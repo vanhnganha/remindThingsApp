@@ -17,6 +17,7 @@
 		522B375A244C089600DAC17C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B3759244C089600DAC17C /* Constant.swift */; };
 		522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375C244C0ABE00DAC17C /* SignUpViewController.swift */; };
 		522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B375E244C16EF00DAC17C /* StartViewController.swift */; };
+		525C0CE82456D2E5006AE6C3 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */; };
 		526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DB244C4C8C00B00916 /* ExtensionController.swift */; };
 		526135DE244C523B00B00916 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526135DD244C523B00B00916 /* HomeViewController.swift */; };
 		52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */; };
@@ -28,6 +29,8 @@
 		52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF1D244EEBE30001924D /* ListThings.swift */; };
 		52B4AF21244FE2DB0001924D /* SignOutControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */; };
 		52B4AF23244FF30E0001924D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4AF22244FF30E0001924D /* SettingViewController.swift */; };
+		52DDEE1A245E7A2900E8F271 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */; };
+		52DDEE1C245E7AE800E8F271 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */; };
 		A3DEA827CD7C681AD373CBCD /* Pods_RemindThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,7 @@
 		522B3759244C089600DAC17C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		522B375C244C0ABE00DAC17C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		522B375E244C16EF00DAC17C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		526135DB244C4C8C00B00916 /* ExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionController.swift; sourceTree = "<group>"; };
 		526135DD244C523B00B00916 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		52B4AF1D244EEBE30001924D /* ListThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListThings.swift; sourceTree = "<group>"; };
 		52B4AF20244FE2DB0001924D /* SignOutControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutControllerViewController.swift; sourceTree = "<group>"; };
 		52B4AF22244FF30E0001924D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		D6C63D8091355DE68187D7CF /* Pods_RemindThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemindThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AF1B53BEB7E461B080B45B /* Pods-RemindThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindThings.release.xcconfig"; path = "Target Support Files/Pods-RemindThings/Pods-RemindThings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,9 +122,9 @@
 				52B4AF0E244D391B0001924D /* Model */,
 				522B375B244C0A7F00DAC17C /* Controller */,
 				52B4AF0F244D392A0001924D /* View */,
+				52B4AF10244D39370001924D /* Support */,
 				522B374E244B40D500DAC17C /* Assets.xcassets */,
 				522B3753244B40D500DAC17C /* Info.plist */,
-				52B4AF10244D39370001924D /* Support */,
 			);
 			path = RemindThings;
 			sourceTree = "<group>";
@@ -129,8 +135,6 @@
 				52B463482453F464006DA775 /* Feature */,
 				52B4AF1F244FE2AA0001924D /* Sign */,
 				52B4AF19244EEB1B0001924D /* ListToDo */,
-				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
-				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +142,8 @@
 		52B463482453F464006DA775 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				526135DB244C4C8C00B00916 /* ExtensionController.swift */,
+				52B4633E2452D5AA006DA775 /* TabBarControllerViewController.swift */,
 				526135DD244C523B00B00916 /* HomeViewController.swift */,
 				522B375E244C16EF00DAC17C /* StartViewController.swift */,
 				52B4AF22244FF30E0001924D /* SettingViewController.swift */,
@@ -160,8 +166,6 @@
 			children = (
 				522B374B244B40D100DAC17C /* Main.storyboard */,
 				522B3750244B40D500DAC17C /* LaunchScreen.storyboard */,
-				52B463442453E853006DA775 /* CategoryCell.swift */,
-				52B463452453E853006DA775 /* CategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				52B4AF1A244EEB460001924D /* CategoryTableViewController.swift */,
+				52DDEE19245E7A2900E8F271 /* ItemTableViewController.swift */,
+				52DDEE1B245E7AE800E8F271 /* SwipeTableViewController.swift */,
+				52B463442453E853006DA775 /* CategoryCell.swift */,
+				52B463452453E853006DA775 /* CategoryCell.xib */,
+				525C0CE72456D2E5006AE6C3 /* CustomProgressBar.swift */,
 			);
 			path = ListToDo;
 			sourceTree = "<group>";
@@ -318,10 +327,13 @@
 				52B4AF1E244EEBE30001924D /* ListThings.swift in Sources */,
 				522B3748244B40D100DAC17C /* SceneDelegate.swift in Sources */,
 				526135DE244C523B00B00916 /* HomeViewController.swift in Sources */,
+				525C0CE82456D2E5006AE6C3 /* CustomProgressBar.swift in Sources */,
+				52DDEE1A245E7A2900E8F271 /* ItemTableViewController.swift in Sources */,
 				522B375A244C089600DAC17C /* Constant.swift in Sources */,
 				52B4AF0D244D390E0001924D /* User.swift in Sources */,
 				52B463462453E853006DA775 /* CategoryCell.swift in Sources */,
 				522B375D244C0ABE00DAC17C /* SignUpViewController.swift in Sources */,
+				52DDEE1C245E7AE800E8F271 /* SwipeTableViewController.swift in Sources */,
 				526135DC244C4C8C00B00916 /* ExtensionController.swift in Sources */,
 				52B4633F2452D5AA006DA775 /* TabBarControllerViewController.swift in Sources */,
 				522B375F244C16EF00DAC17C /* StartViewController.swift in Sources */,

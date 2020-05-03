@@ -8,10 +8,18 @@
 
 import Foundation
 import Firebase
-struct ListThings {
+struct Categogy {
     var id: String
     var name: String
     var color: String
-    var isDeleted: Bool
-    var listChild: Array<String>?
+    var totalNum: Int
+    var doneNum: Int
+    var date: Timestamp
+    var listChild: [String: Item]?
+}
+struct Item{
+    var id: String
+    var name: String
+    var date: Timestamp
+    var done: Bool
 }

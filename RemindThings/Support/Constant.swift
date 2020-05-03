@@ -10,6 +10,7 @@ import Foundation
 struct K{
     struct Segue {
         static var homeToList = "HomeToList"
+        static var listItem = "listItem"
     }
     struct Icon {
         var login = "person-male"
